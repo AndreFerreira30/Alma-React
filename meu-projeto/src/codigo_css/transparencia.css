@@ -1,0 +1,43 @@
+/* Seção Nosso Compromisso */
+.mainsec{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 60px;
+    gap: 60px;
+}
+
+.mainsec button{
+    padding: 10px 30px;
+    border-radius: 40px;
+    background-color: var(--cor4);
+}
+
+.trans-conpromisso {
+    display: flex;
+    padding-right: 40px;
+    border-right: 2px solid  var(--cor4); /* cor da linha */
+}
+
+.trans-conpromisso article {
+    flex: 1;
+    max-width: 700px;
+}
+
+.trans-conpromisso div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Seção Balanço Financeiro */
+.trans-balanco {
+    padding: 10px;
+}
+
+.trans-balanco div {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}

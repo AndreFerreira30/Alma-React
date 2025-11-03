@@ -1,0 +1,56 @@
+/* --- BASE DAS SEÇÕES --- */
+.projeto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 30px;
+  gap: 60px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 80px auto 80px auto; /* Centraliza e adiciona respiro */
+  box-sizing: border-box; /* evita estourar tela */
+  overflow: hidden; /* impede vazar pra fora */
+  position: relative;
+}
+
+/* texto */
+.projeto article {
+  max-width: 520px;
+}
+
+/* título */
+.projeto h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* parágrafo */
+.projeto p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* imagem */
+.projeto img {
+  width: 500px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.20);
+}
+
+/* --- CORES IGUAIS AO PRIMEIRO LAYOUT --- */
+.projeto1 { background-color: #C1E5DF; }
+.projeto2 { background-color: #F6CEDD; flex-direction: row-reverse; }
+.projeto3 { background-color: #B9C3EE; }
+.projeto4 { background-color: #FFDFA4; flex-direction: row-reverse; }
+
+/* --- BORDA ARREDONDADA ALTERNADA --- */
+.projeto1, .projeto3 {
+  border-radius: 0 80px 80px 0; /* esquerda arredondada */
+}
+
+.projeto2, .projeto4 {
+  border-radius: 80px 0 0 80px; /* direita arredondada */
+}
