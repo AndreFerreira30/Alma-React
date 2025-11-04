@@ -19,7 +19,12 @@ main > div {
   }
 
 .home-section3-sobre{
+    display: flex;
     background-color: var(--cor1);
+    max-width: auto;
+    max-height: 600px;
+    padding-left: 100px;
+    gap: 50px;
 }
 
 /* TERCEIRA SECTION*/

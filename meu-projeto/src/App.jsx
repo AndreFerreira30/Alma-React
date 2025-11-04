@@ -7,6 +7,7 @@ import Doador from './Doador'
 import Sobrenos from './Sobrenos'
 import Atividades from './Atividades'
 import Transparencia from './Transparencia'
+import Eventos from './Eventos'
 import { Routes, Route } from "react-router-dom";
 
 //import de imagens
@@ -109,6 +110,7 @@ function App() {
         <Route path="/sobrenos" element={<Sobrenos />} />
         <Route path= "/atividades" element={<Atividades />}/>
         <Route path= "/transparencia" element={<Transparencia />}/>
+        <Route path= "/eventos" element={<Eventos />}/>
       </Routes>
 
       <Footer/>
