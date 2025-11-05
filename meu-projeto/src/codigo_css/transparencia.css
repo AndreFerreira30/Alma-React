@@ -41,3 +41,73 @@
     gap: 15px;
     flex-wrap: wrap;
 }
+
+/* --- CELULAR (até 768px) --- */
+@media (max-width: 768px) {
+    .mainsec {
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      gap: 40px;
+    }
+  
+    .trans-conpromisso {
+      flex-direction: column;
+      align-items: center;
+      padding-right: 0;
+      border-right: none;
+      border-bottom: 2px solid var(--cor4);
+      padding-bottom: 30px;
+      text-align: center;
+    }
+  
+    .trans-conpromisso article {
+      max-width: 100%;
+    }
+  
+    .trans-conpromisso div {
+      width: 100%;
+      align-items: center;
+    }
+  
+    .mainsec button {
+      width: 80%;
+      font-size: 1rem;
+    }
+  
+    .trans-balanco {
+      padding: 30px 15px;
+    }
+  
+    .trans-balanco div {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  /* --- TABLET (768px a 1160px) --- */
+@media (min-width: 768px) and (max-width: 1160px) {
+    .mainsec {
+      flex-wrap: wrap;
+      gap: 50px;
+      padding: 50px 40px;
+    }
+  
+    .trans-conpromisso {
+      flex-wrap: wrap;
+      border-right: none;
+      border-bottom: 2px solid var(--cor4);
+      padding-bottom: 30px;
+    }
+  
+    .trans-conpromisso article {
+      max-width: 100%;
+    }
+  
+    .trans-balanco div {
+      justify-content: center;
+      gap: 25px;
+    }
+  }
+  

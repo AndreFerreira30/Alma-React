@@ -54,3 +54,62 @@
 .projeto2, .projeto4 {
   border-radius: 80px 0 0 80px; /* direita arredondada */
 }
+
+/* --- CELULARES (até 768px) --- Mudança vitinho*/                          
+@media (max-width: 768px) {
+  .projeto {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+    border-radius: 0;
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  .projeto article {
+    max-width: 100%;
+  }
+
+  .projeto h1 {
+    font-size: 1.5rem;
+  }
+
+  .projeto p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .projeto img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+  }
+}
+
+/* --- Dispositivos Grandes (768px a 1160px) --- Mudança vitinho*/
+@media (min-width: 768px) and (max-width: 1160px) {
+  .projeto {
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px 30px;
+    border-radius: 0 40px 0 40px;
+  }
+
+  .projeto article {
+    max-width: 90%;
+  }
+
+  .projeto h1 {
+    font-size: 1.7rem;
+  }
+
+  .projeto p {
+    font-size: 1.05rem;
+  }
+
+  .projeto img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 20px;
+  }
+}

@@ -60,3 +60,47 @@
     background: #333;
 }
 
+/* --- CELULARES (até 768px) --- Mudança Vitinho */
+@media (max-width: 768px) {
+    .carousel {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+  
+    .carousel-inner img {
+      border-radius: 6px;
+    }
+  
+    .btn {
+      font-size: 18px;
+      padding: 6px 8px;
+    }
+  
+    .dots {
+      bottom: 8px;
+      gap: 4px;
+    }
+  
+    .dot {
+      height: 10px;
+      width: 10px;
+    }
+  }
+
+  /* --- Dispositivos Grandes (768px a 1160px) Mudança Vitinho --- */
+@media (min-width: 768px) and (max-width: 1160px) {
+    .carousel {
+      max-width: 700px;
+    }
+  
+    .btn {
+      font-size: 22px;
+      padding: 7px 10px;
+    }
+  
+    .dot {
+      height: 11px;
+      width: 11px;
+    }
+  }
+ 

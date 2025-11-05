@@ -37,3 +37,63 @@
     border-bottom: none;      
   }
   
+/* --- CELULARES (até 768px) --- */
+@media (max-width: 768px) {
+  .doador-titulo {
+    padding: 0 8px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .doador-lista {
+    padding: 0 5px 15px 5px;
+  }
+
+  .doador-lista > ul {
+    border-width: 3px;
+    border-radius: 4px;
+  }
+
+  .doador-lista > ul li {
+    display: flex;
+    flex-direction: column; /* empilha nome e e-mail */
+    padding: 8px 10px;
+    text-align: left;
+  }
+
+  .doador-lista > ul li div {
+    border-right: none;
+    padding-right: 0;
+    margin-bottom: 4px;
+  }
+
+  .doador-lista > ul li span {
+    padding-left: 0;
+    font-size: 0.95rem;
+    color: #222;
+  }
+}
+
+/* --- Dispositivos Grandes (768px a 1160px) --- */
+@media (min-width: 768px) and (max-width: 1160px) {
+  .doador-lista {
+    padding: 0 20px 25px 20px;
+  }
+
+  .doador-lista > ul {
+    border-width: 4px;
+  }
+
+  .doador-lista > ul li {
+    grid-template-columns: 140px 1fr;
+    padding: 10px 15px;
+  }
+
+  .doador-lista > ul li div {
+    font-size: 1rem;
+  }
+
+  .doador-lista > ul li span {
+    font-size: 0.95rem;
+  }
+}
