@@ -230,7 +230,7 @@ main div{
 .home-section3{
     display: flex;
     background-color: var(--cor2);
-    padding: 60px 20px 60px 40px;
+    padding: 60px 20px 60px 75px;
 }
 
 .home-section3 article{

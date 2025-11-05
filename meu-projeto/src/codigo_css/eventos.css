@@ -1,3 +1,9 @@
+.home-eventos{
+  display: flex;
+  gap: 40px;
+  background-color: var(--cor1);
+}
+
 .facebook-bloco{
     display:flex;
     justify-content:center;
