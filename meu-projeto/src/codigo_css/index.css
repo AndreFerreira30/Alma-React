@@ -50,14 +50,13 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 40px;
-    gap: 20px;
+    padding: 20px 1px;
+    gap: 10px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000; /* garante que fica na frente */
-    
 }
 
 header img{
@@ -68,7 +67,9 @@ header img{
 
 nav{
     display: flex;
+    justify-content: center;
     margin: 0px;
+    white-space: nowrap;
 }
 a.navegador{
     text-decoration: none;
@@ -77,27 +78,58 @@ a.navegador{
     font-size: 0.9em;
     font-family: var(--font-destaque);
     border-radius: 5px;
-    padding: 13px 10px 3px 10px;
+    padding: 13px 15px 3px 15px;
 }
 a.navegador:hover{
     background-color: black;
     color: var(--cor2);
+    border-radius: 20px;
+    transition: none;
 }
-.btn-doeagora{
-    display: inline-block;
+.btn-login{
+    display: block;
+    justify-content: space-between; 
     font-family: var(--font-destaque);
-    background-color: #f7c533; /* amarelo principal */
+    background-color: #1D2344; /* amarelo principal */
     color: #fff; /* texto branco */
     text-decoration: none; /* remove o sublinhado */
-    padding: 12px 28px; /* espaçamento interno */
+    padding: 12px 20px; /* espaçamento interno */
     border-radius: 50px; /* bordas arredondadas tipo pílula */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* leve sombra */
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.425);
     transition: all 0.3s ease;
+    width: 90%;
+    max-width: 85%;
+    text-align: center;
+    align-content: center;
+    padding: 15px;
 }
 
-.btn-doeagora:hover {
-    background-color: #ffb700; /* tom mais forte no hover */
+.btn-login:hover {
+    background-color: #2940c2; /* tom mais forte no hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-doar {
+  display: block;
+  font-family: var(--font-destaque);
+  background-color: #f7c533; /* amarelo principal */
+  color: #fff; /* texto branco */
+  text-decoration: none; /* remove o sublinhado */
+  padding: 12px 20px; /* espaçamento interno */
+  border-radius: 50px; /* bordas arredondadas tipo pílula */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* leve sombra */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.425);
+  transition: all 0.3s ease;
+  width: 90%;
+  max-width: 85%;
+  text-align: center;
+  align-content: center;
+}
+
+.bnt-doar:hover {
+  background-color: #fcb80d; /* tom mais forte no hover */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
 }
@@ -343,7 +375,7 @@ footer div p{
         flex-direction: column;
         background-color: var(--cor1);
         position: absolute;
-        top: 60px;
+        top: 70px;
         left: 0;
         width: 100%;
         padding: 20px;

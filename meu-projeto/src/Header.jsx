@@ -18,11 +18,11 @@ function Header(){
         <nav  className={abrirMenu?"nav-active" : ""}>
             <Link to="/sobrenos" className="navegador">SOBRE NÓS</Link>
             <Link to="/atividades" className="navegador">ATIVIDADES</Link>
-            <Link to="/doador" className='navegador' >DOADOR</Link>
             <Link to="/transparencia" className="navegador">TRANSPARÊNCIA</Link>
             <Link to="/ouvidoria" className="navegador">OUVIDORIA</Link>
             <Link to="/eventos" className="navegador" >EVENTOS</Link>
-            <Link to="/login" className="btn-doeagora"> DOE AGORA</Link>
+            <Link to="/login" className="btn-login"> LOGIN</Link>
+            <Link to="/doador" className="btn-doar"> DOAR AGORA</Link>
         </nav>
     </header>
     )
