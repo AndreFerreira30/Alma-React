@@ -103,6 +103,7 @@ a.navegador:hover{
     text-align: center;
     align-content: center;
     padding: 15px;
+    gap: 10px; 
 }
 
 .btn-login:hover {
@@ -121,11 +122,12 @@ a.navegador:hover{
   border-radius: 50px; /* bordas arredondadas tipo pílula */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* leve sombra */
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.425);
-  transition: all 0.3s ease;
   width: 90%;
   max-width: 85%;
   text-align: center;
   align-content: center;
+  margin-left: 15px;
+  transition: all 0.3s ease;
 }
 
 .bnt-doar:hover {
@@ -584,4 +586,3 @@ footer div p{
       right: 0px; 
   }
   }
-  
