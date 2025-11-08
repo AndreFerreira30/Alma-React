@@ -9,6 +9,8 @@ import Atividades from './Atividades'
 import Transparencia from './Transparencia'
 import Eventos from './Eventos'
 import Ouvidoria from './Ouvidoria'
+import Login from "./Login";
+import Cadastro from "./Cadastro";
 import { Routes, Route } from "react-router-dom";
 
 //import de imagens
@@ -113,6 +115,8 @@ function App() {
         <Route path= "/transparencia" element={<Transparencia />}/>
         <Route path= "/eventos" element={<Eventos />}/>
         <Route path= "/ouvidoria" element={<Ouvidoria />}/>
+        <Route path="/login" element={<Login />} />
+        <Route path="/Cadastro" element={<Cadastro />} />
       </Routes>
 
       <Footer/>

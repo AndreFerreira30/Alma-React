@@ -1,0 +1,105 @@
+/* --- Cadastro.css CORRIGIDO E AJUSTADO --- */
+
+/* 1. Container Principal (Aumenta o espaçamento superior e inferior) */
+.cadastro-main-container {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* AUMENTAMOS o padding para afastar o card do Header e Footer */
+    padding: 80px 20px; 
+    min-height: 70vh; 
+}
+
+/* 2. O Card de Cadastro (Volta para o layout de duas colunas) */
+.cadastro-card {
+    display: flex; /* Essencial para manter as duas colunas */
+    width: 850px; /* Largura do card de duas colunas */
+    max-width: 90%;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Borda arredondada como na imagem */
+    overflow: hidden;
+}
+
+/* Estilos da imagem (Mantidos do exemplo anterior) */
+.cadastro-card-image {
+    width: 50%;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    /* Adicionar filtro de cor ou transparência se necessário para o efeito */
+}
+
+/* 3. Estilos do Formulário */
+.cadastro-card-form {
+    width: 50%;
+    background-color: var(--cor-primaria, #0a1f44); /* Azul escuro */
+    padding: 40px;
+    color: var(--cor-texto-claro, #ffffff);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo (título e form) verticalmente */
+}
+
+.cadastro-card-form h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* 4. Ajuste do Espaçamento dos Campos (input-group) */
+.input-group {
+    /* O valor de margin-bottom é crucial para o espaçamento vertical entre os campos */
+    margin-bottom: 15px; 
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px; /* Pequeno espaço entre o label e a barra */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 16px;
+    background-color: #ffffff; 
+    color: #000000; 
+}
+
+/* 5. Botão Cadastrar (Mantém o gradiente original da imagem) */
+.btn-cadastrar {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px; /* Espaço entre o último input e o botão */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--cor-primaria, #0a1f44);
+    
+    /* Gradiente sutil para simular o efeito da imagem */
+    background: linear-gradient(145deg, #c7e5f0, #e6f6ff); 
+    transition: background 0.3s;
+}
+
+/* Se houver media queries, ajuste-as para o novo layout de duas colunas */
+@media (max-width: 880px) {
+    .cadastro-card {
+        flex-direction: column;
+        width: 450px;
+    }
+    .cadastro-card-image,
+    .cadastro-card-form {
+        width: 100%;
+    }
+    .cadastro-card-image {
+        min-height: 250px;
+    }
+}
