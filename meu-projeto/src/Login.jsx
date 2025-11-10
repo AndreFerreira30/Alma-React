@@ -1,12 +1,13 @@
 import React from "react";
 import "./codigo_css/Login.css";
+import login_img from './assets/image/login_img.png'
 
 function Login() {
     return (
       <main className="login-container">
         <div className="login-card">
           <div className="login-image">
-            {/* <img src={loginImage} alt="Imagem de voluntário cozinhando" /> */}
+            <img src={login_img} alt="Imagem de voluntário cozinhando" />
           </div>
   
           <div className="login-form">
@@ -28,6 +29,9 @@ function Login() {
   
               <p className="registro-texto">
                 Não possui uma conta? <a href="./Cadastro">Registre-se</a>
+              </p>
+              <p className="admin-texto">
+                É administrador Alma? Entre <a href="./Administrador">aqui</a>
               </p>
             </form>
           </div>

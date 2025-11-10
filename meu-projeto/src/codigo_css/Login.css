@@ -57,15 +57,15 @@
 }
 
 .esqueceu-senha {
-  color: #cdd5ff;
+  color: #ecefff;
   font-size: 0.9em;
   margin-top: 10px;
   display: inline-block;
 }
 
 .btn-entrar {
-  background-color: #c2e3e0;
-  color: #000;
+  background-color: #B1DBD8;
+  color: #1F2649;
   border: none;
   padding: 10px 20px;
   margin-top: 20px;
@@ -75,7 +75,8 @@
 }
 
 .btn-entrar:hover {
-  background-color: #a8d1cf;
+  background-color: #6cd1cc;
+  color: #1f2e7c;
 }
 
 .registro-texto {
@@ -87,4 +88,104 @@
 .registro-texto a {
   color: #fff;
   text-decoration: underline;
+}
+
+.admin-texto {
+  margin-top: 15px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.admin-texto a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    padding: 40px 20px;
+  }
+
+  .login-card {
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: none;
+    border-radius: 15px;
+  }
+
+  /* Oculta ou reduz a imagem */
+  .login-image {
+    display: none;
+  }
+
+  .login-form {
+    padding: 30px 25px;
+    border-radius: 15px;
+    background: linear-gradient(160deg, #1E2447, #4554A2);
+  }
+
+  .login-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .login-form label {
+    font-size: 0.9rem;
+  }
+
+  .login-form input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .esqueceu-senha {
+    font-size: 0.85rem;
+  }
+
+  .btn-entrar {
+    font-size: 0.95rem;
+    padding: 10px;
+    margin-top: 15px;
+  }
+
+  .registro-texto {
+    font-size: 0.85rem;
+    margin-top: 12px;
+  }
+}
+
+/* Dispositivos Grandes: 768px a 1160px */
+@media (min-width: 768px) and (max-width: 1160px) {
+  .login-card {
+    flex-direction: column;
+    width: 90%;
+    max-width: 700px;
+  }
+
+  .login-form {
+    padding: 35px 40px;
+  }
+
+  .login-form h2 {
+    font-size: 1.6rem;
+  }
+
+  .login-form label {
+    font-size: 0.95rem;
+  }
+
+  .login-form input {
+    font-size: 0.95rem;
+    padding: 9px;
+  }
+
+  .btn-entrar {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .registro-texto {
+    font-size: 0.9rem;
+  }
 }

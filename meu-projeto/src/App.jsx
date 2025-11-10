@@ -11,6 +11,7 @@ import Eventos from './Eventos'
 import Ouvidoria from './Ouvidoria'
 import Login from "./Login";
 import Cadastro from "./Cadastro";
+import Administrador from "./Administrador";
 import { Routes, Route } from "react-router-dom";
 
 //import de imagens
@@ -117,6 +118,7 @@ function App() {
         <Route path= "/ouvidoria" element={<Ouvidoria />}/>
         <Route path="/login" element={<Login />} />
         <Route path="/Cadastro" element={<Cadastro />} />
+        <Route path="/Administrador" element={<Administrador />} />
       </Routes>
 
       <Footer/>
