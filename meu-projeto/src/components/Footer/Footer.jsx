@@ -1,15 +1,14 @@
-import logoClarapqn from './assets/image/logo-clara-pqn.png'
-import facebookIcon from './assets/image/facebook-icon.png'
-import instagramIcon from './assets/image/instagram-icon.png'
-import mapsimg from './assets/image/maps-img.png'
+import logoClarapqn from '../../assets/image/logo-clara-pqn.png'
+import facebookIcon from '../../assets/image/facebook-icon.png'
+import instagramIcon from '../../assets/image/instagram-icon.png'
+import mapsimg from '../../assets/image/maps-img.png'
+import './footer.css'
 
 function Footer(){
     return(
     <footer>
         <img className='logo-footer' src={logoClarapqn} alt="Logo instituo alma" />
         <div>
-            <p> Copyright &copy; Instituto Alma 2025. Todos os direitos reservados.</p>
-
             <div className='icon-footer'>
                 <a href="https://maps.app.goo.gl/axMBEmGqhCJPXTvT9" target='_blank' rel='external'><img src={mapsimg} alt="Icone de redirecionamento ao endereço do instituo Alma"/></a>
 
@@ -23,7 +22,7 @@ function Footer(){
                 <img src={instagramIcon} alt="icone instagram" />
                 </a>
             </div>
-            
+            <p> Copyright &copy; Instituto Alma 2025. Todos os direitos reservados.</p>
         </div>
     </footer>
     )

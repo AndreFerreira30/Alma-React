@@ -1,6 +1,7 @@
-import './codigo_css/index.css'
-import './codigo_css/transparencia.css'
-import fundOuvidoria from './assets/image/mainfund_ouvidoria.png'
+import '../../index.css'
+import './ouvidoria.css'
+import '../../components/Button/button.css'
+import fundOuvidoria from '../../assets/image/mainfund_ouvidoria.png'
 
 
 function Ouvidoria (){
@@ -12,8 +13,8 @@ function Ouvidoria (){
                 <h1>OUVIDORIA</h1>
             </div>
 
-            <section className="mainsec">
-                <section className="trans-conpromisso">
+            <section className="ouvidoria">
+                <section className="texto-ouvidoria">
                     <article>
                         <h1>Esclarecimento de Dúvidas </h1>
                         <p>
@@ -25,7 +26,7 @@ function Ouvidoria (){
                 <section className="formulario_ouvidoria">
                     <h1>Fale Conosoco</h1>
                     <input type="email" name="" id=""  placeholder='Email'/>
-                    <input type="text" placeholder='Descreva aqui' />
+                    <textarea placeholder="Descrição"></textarea>
                     <button>Enviar</button>
                 </section>
                 

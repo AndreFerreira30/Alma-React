@@ -1,0 +1,31 @@
+
+
+button{
+    border-radius: 10px;
+    padding: 7px 22px 7px 22px;
+    background-color: var(--cor5);
+    color: var(--cor1);
+    border: 1px solid white;
+    font-size: 1.1em;
+    font-family: var(--font-texto);
+    margin: 10px;
+}
+
+.btn-destaque{
+    color: var(--cor5);
+    background-color: var(--cor2);
+    border: 1px solid black;
+}
+
+.btn-destaque:hover{
+    background-color: var(--cor4);
+    color: var(--cor1);
+}
+
+main button:hover{
+    font-weight: normal;
+    background-color: var(--cor2);
+    color: black;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}

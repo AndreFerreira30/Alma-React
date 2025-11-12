@@ -1,0 +1,114 @@
+.ouvidoria {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 3rem 4rem;
+}
+
+/* --- BLOCO DO TEXTO --- */
+.texto-ouvidoria {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--cor5);
+    padding-right: 2rem;
+    border-right: 2px solid rgb(0, 0, 0); /* a barra divisória */
+}
+
+.texto-ouvidoria h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.texto-ouvidoria p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.formulario_ouvidoria textarea {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    height: 120px;
+    resize: none; /* impede redimensionamento manual */
+    outline: none;
+    overflow-y: auto; /* ativa a rolagem vertical */
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+
+
+
+.formulario_ouvidoria {
+    background-color: var(--cor2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.formulario_ouvidoria h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cor4);
+    margin-bottom: 1.5rem;
+}
+
+.formulario_ouvidoria input[type="email"],
+.formulario_ouvidoria input[type="text"] {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.formulario_ouvidoria input[type="text"] {
+    height: 120px; /* simula a área de texto */
+}
+
+.formulario_ouvidoria button {
+    width: 100%;
+    background-color: #1a2640;
+    color: #fff;
+    border-radius: 20px;
+    padding: 0.7rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .formulario_ouvidoria {
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+        .ouvidoria {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .texto-ouvidoria {
+        border-right: none;
+        border-bottom: 2px solid rgba(25, 52, 94, 0.3);
+        padding-right: 0;
+        padding-bottom: 2rem;
+        text-align: center;
+}
+}

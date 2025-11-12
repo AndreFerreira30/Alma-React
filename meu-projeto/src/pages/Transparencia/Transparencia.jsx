@@ -1,7 +1,8 @@
 import React from "react";
-import "./codigo_css/index.css"
-import "./codigo_css/transparencia.css"
-import mainfundo from "./assets/image/mainfund_transparencia.png"
+import "../../index.css"
+import "./transparencia.css"
+import'../../components/Button/button.css'
+import mainfundo from "../../assets/image/mainfund_transparencia.png"
 
 
 function Transparencia (){

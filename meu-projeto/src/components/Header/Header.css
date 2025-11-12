@@ -1,0 +1,200 @@
+header{
+    background-color: var(--cor1);
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.363);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 1px;
+    gap: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* garante que fica na frente */
+}
+
+header img{
+    max-width: 120px;
+    height: auto;
+    padding: 5px 10px 20px 0px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    white-space: nowrap;
+}
+a.navegador{
+    text-decoration: none;
+    color: var(--cor4);
+    transition-duration: 0.5s;
+    font-size: 0.9em;
+    font-family: var(--font-destaque);
+    border-radius: 5px;
+    padding: 13px 15px 3px 15px;
+}
+a.navegador:hover{
+    background-color: black;
+    color: var(--cor2);
+    border-radius: 20px;
+    transition: none;
+}
+
+.hamburguer { 
+    display: none; 
+    font-size: 2rem; 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    color: var(--cor4); 
+}
+
+.navegador-login{
+    display: block;
+    justify-content: space-between; 
+    font-family: var(--font-destaque);
+    background-color: #1D2344; /* amarelo principal */
+    color: #fff; /* texto branco */
+    text-decoration: none; /* remove o sublinhado */
+    padding: 12px 20px; /* espaçamento interno */
+    border-radius: 50px; /* bordas arredondadas tipo pílula */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* leve sombra */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.425);
+    transition: all 0.3s ease;
+    width: 90%;
+    max-width: 85%;
+    text-align: center;
+    align-content: center;
+    padding: 15px;
+    gap: 10px; 
+}
+
+.navegador-login:hover {
+    background-color: #2940c2; /* tom mais forte no hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.navegador-doar {
+  display: block;
+  font-family: var(--font-destaque);
+  background-color: #f7c533; /* amarelo principal */
+  color: #fff; /* texto branco */
+  text-decoration: none; /* remove o sublinhado */
+  padding: 12px 20px; /* espaçamento interno */
+  border-radius: 50px; /* bordas arredondadas tipo pílula */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* leve sombra */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.425);
+  width: 90%;
+  max-width: 85%;
+  text-align: center;
+  align-content: center;
+  margin-left: 15px;
+  transition: all 0.3s ease;
+}
+
+.navegador-doar:hover {
+  background-color: #fcb80d; /* tom mais forte no hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+
+
+/* =======================================
+    RESPONSIVIDADE PARA DISPOSITIVOS INTERMEDIÁRIOS
+    ======================================== */
+@media (min-width: 768px) and (max-width: 1160px) {
+
+    /* HEADER: Container principal */
+    header {
+      padding: 10px 15px; /* Menos padding lateral para ganhar espaço */
+      gap: 15px; /* Mais espaço entre os grupos de elementos */
+    }
+
+    /* LOGO */
+    header img {
+      max-width: 100px; /* Logo um pouco menor que no desktop */
+      padding: 0; /* Remove padding desnecessário na lateral do logo */
+    }
+
+    /* NAVEGAÇÃO: Links (SOBRE NÓS, EVENTOS, etc.) */
+    a.navegador {
+      font-size: 0.85em; /* Diminui a fonte para que caiba mais texto */
+      padding: 5px 8px; /* Reduz o padding interno do link */
+      flex-wrap: wrap;
+    }
+
+    /* BOTÕES DE AÇÃO: ENTAR e DOAR AGORA */
+    .navegador-login, .navegador-doar {
+        /* Garante que os botões não fiquem excessivamente largos */
+        width: auto;
+        padding: 10px 15px; /* Um pouco menos de padding para ficarem mais compactos */
+        font-size: 0.9em; /* Diminui levemente a fonte dos botões */
+    }
+
+}
+
+
+/* ================================
+   RESPONSIVIDADE PARA CELULARES
+   ================================ */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+      flex-direction: row; /* logo em cima, menu embaixo */
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+  
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: var(--cor1);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        align-items: center;
+        
+    }
+
+    nav.nav-active {
+        display: flex;
+        
+    }
+
+    a.navegador {
+        display: block;
+        width: 50%; /* Ocupa o espaço horizontal do menu */
+        text-align: center; /* Centraliza o texto do link */
+        padding: 15px 0; /* Mais padding vertical para espaçar */
+        border-radius: 0; /* Remove a borda arredondada no mobile, fica mais limpo */
+        
+        /* Remova padding: 13px 15px 3px 15px; que estava apertando! */
+    }
+
+    .hamburguer {
+        display: block;
+        margin-left: auto;
+        background: none;
+        border: none;
+      }
+  
+    header img {
+      max-width: 90px; /* logo menor no celular */
+      padding: 0;
+    }
+
+    .navegador-login, .navegador-doar {
+        display: block; /* Volta a ser bloco para ocupar a linha toda */
+        width: 80%;     /* Permite que ocupe a maior parte da largura do menu */
+        max-width: 300px; /* Ajuste para não estourar */
+        margin: 10px auto; /* Centraliza horizontalmente (o 'auto' é importante!) */
+    }
+
+}

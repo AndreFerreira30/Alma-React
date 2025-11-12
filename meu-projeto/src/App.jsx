@@ -1,17 +1,17 @@
 // App.jsx
-import './codigo_css/index.css'
-import Header from './Header'
-import Footer from './Footer'
-import Carousel from './Carousel'
-import Doador from './Doador'
-import Sobrenos from './Sobrenos'
-import Atividades from './Atividades'
-import Transparencia from './Transparencia'
-import Eventos from './Eventos'
-import Ouvidoria from './Ouvidoria'
-import Login from "./Login";
-import Cadastro from "./Cadastro";
-import Administrador from "./Administrador";
+import './index.css'
+import './components/Button/button.css'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+import Carousel from './components/Carousel/Carousel'
+import Doador from './pages/Doador/Doador'
+import Sobrenos from './pages/Sobrenos/Sobrenos'
+import Atividades from './pages/Atividades/Atividades'
+import Transparencia from './pages/Transparencia/Transparencia'
+import Eventos from './pages/Eventos/Eventos'
+import Ouvidoria from './pages/Ouvidoria/Ouvidoria'
+import Login from "./pages/Login/Login";
+import Cadastro from "./pages/Cadastro/Cadastro";
 import { Routes, Route } from "react-router-dom";
 
 //import de imagens
@@ -118,7 +118,6 @@ function App() {
         <Route path= "/ouvidoria" element={<Ouvidoria />}/>
         <Route path="/login" element={<Login />} />
         <Route path="/Cadastro" element={<Cadastro />} />
-        <Route path="/Administrador" element={<Administrador />} />
       </Routes>
 
       <Footer/>

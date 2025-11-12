@@ -1,71 +1,36 @@
-import React, { useEffect, useState } from "react";
-import './codigo_css/index.css'
-import './codigo_css/atividades.css'
-import doadorBanner from './assets/image/doador1_img.png'
-import doador2 from './assets/image/doador2.png'
-import doador3 from './assets/image/doador3.png'
-// import atv1 from './assets/image/atv_exemplo1.png'
-// import atv2 from './assets/image/atv_exemplo2.png'
-// import atv3 from './assets/image/atv_exemplo3.png'
-// import atv4 from './assets/image/atv_exemplo4.png'
+import React from "react";
+import mainfundo from '../../assets/image/mainfund_sobrenos.png'
+import exemplo from '../../assets/image/carousel4.png'
+import principio1 from '../../assets/image/sobre_principios1.png'
+import principio2 from '../../assets/image/sobre_principios2.png'
+import principio3 from '../../assets/image/sobre_principios3.png'
+import sobrePresidente from '../../assets/image/sobre_presidente.png'
 
-// function Doador(){
-//     const [doador, setDoadores] = useState([]);
+import '../../index.css'
+import './sobrenos.css'
 
-//     useEffect(() => {
-//       fetch("http://localhost:3000/api/doadores") // backend rodando na porta 3000
-//         .then((res) => res.json())
-//         .then((data) => setDoadores(data))
-//         .catch((err) => console.error(err));
-//     }, []);
-
-
-
-//     return(
-//         <main>
-//             <h1 className="doador-titulo">Lista de Usuários:</h1>
-//             <section className="doador-lista">
-//                  <ul>
-//                     {doador.map((u,i) =>(
-//                         <li key={i}>
-//                             <div>Nome: {u.nome}</div> 
-//                             <span>Email: {u.email}</span>
-//                         </li>
-//                     )
-//                     )}
-//                 </ul>  
-//             </section>
-//         </main>
-//     )
-// }
-// export default Doador;
-
-//REFAZENDO A TELA DE DOADOR, SE PRECISAR VOLTAR A ANTIGA SÓ COMENTAR O CÓDIGO ABAIXO E DESCOMENTAR O DE CIMA
-
-function Doador(){
+function Sobrenos(){
 
     return(
         <main>
             <div>
-                <img src={doadorBanner} alt="foto da equipe de cozinha Alma" />
-                <h1>Doar</h1>
+                <img src={mainfundo} alt="foto da equipe de cozinha Alma" />
+                <h1>SOBRE NOS</h1>
             </div>
 
             <section className='home-section3 home-section3-sobre'>
                 <article>
-                <h1>Por Que Doar ao Instituto Alma?</h1>
+                <h1>Nossa Instituição</h1>
                         <p>
-
-                        No Instituto Alma, sua doação vai além do auxílio material; ela se transforma em dignidade, acolhimento e experiências únicas. Acreditamos que a verdadeira mudança acontece ao tocar o coração e levar a esperança a quem mais precisa.
-
+                            O Instituto Alma é uma organização sem fins lucrativos com mais de 18 anos de atuação em São Paulo. Nossa essência é promover a transformação social através de ações diferenciadas, com o propósito de encantar e proporcionar experiências únicas e significativas na vida de pessoas em situação de vulnerabilidade, oferecendo dignidade e esperança. Atuamos prioritariamente nas comunidades carentes e isoladas das zonas Norte e Leste da capital, levando a convicção de que todos merecem viver momentos especiais.
                         </p>
                 </article>
-                <img src={doador2} alt="exemplo" />
+                <img src={exemplo} alt="exemplo" />
             </section>
 
             <section className="secAcumulados">
-                <h1>SUA DOAÇÃO É O MOTOR DA MUDANÇA! </h1>
-                <p >Seu apoio é fundamental! É a sua generosidade que garante:</p>
+                <h1>Resultados Acumulados Instituto Alma</h1>
+                <p >Conheça nossos resultados em números:</p>
                 <div className="acumulados">
                     <article>
                         <h2>2.500 <br />REFEIÇÕES <br /><span className="letraMinuscula">POR SEMANA</span></h2>
@@ -81,11 +46,10 @@ function Doador(){
             </section>
 
             <section className="secPrincipios">
-                <h1>SUA DOAÇÃO É O MOTOR DA MUDANÇA! </h1>
-                <p >Seu apoio é fundamental! É a sua generosidade que garante:</p>
+                <h1>PRINCIPIOS</h1>
                 <div>
                     <article>
-                        {/* <img src={doador3} alt="Icone de um avião" /> */}
+                        <img src={principio1} alt="Icone de um avião" />
                         <h2>Missão</h2>
                         <p>
                             Promover a transformação social através de ações únicas e inesquecíveis que ofereçam dignidade, acolhimento e esperança a famílias e indivíduos em situação de vulnerabilidade.
@@ -93,7 +57,7 @@ function Doador(){
                     </article>
 
                     <article>
-                        {/* <img src={principio2} alt="Um olho" /> */}
+                        <img src={principio2} alt="Um olho" />
                         <h2>Visão</h2>
                         <p>
                             Ser referência na promoção de mudanças sociais significativas, levando experiências especiais a comunidades carentes e isoladas nas zonas Norte e Leste de São Paulo.
@@ -101,7 +65,7 @@ function Doador(){
                     </article>
 
                     <article>
-                        {/* <img src={principio3} alt="Icone de coração" /> */}
+                        <img src={principio3} alt="Icone de coração" />
                         <h2>Valores</h2>
                         <p>
                             Unicidade para momentos especiais; Ação Transformadora que muda vidas; e Acolhimento, Dignidade e Inclusão Social para todas as comunidades.
@@ -111,7 +75,7 @@ function Doador(){
             </section>
 
             <section className="secPresidente">
-                {/* <img src={sobrePresidente} alt="Presidente do istituto alma" /> */}
+                <img src={sobrePresidente} alt="Presidente do istituto alma" />
         
                     <div className="textoPresidente">
                         <h1>PALAVRAS DO PRESIDENTE</h1>
@@ -124,4 +88,4 @@ function Doador(){
     );
 }
 
-export default Doador;
+export default Sobrenos;

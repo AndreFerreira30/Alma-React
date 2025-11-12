@@ -1,6 +1,7 @@
 import React from "react";
-import "./codigo_css/Cadastro.css"; // pode reaproveitar o mesmo CSS do login
-import cadastro_img from './assets/image/cadastro_img.png'
+import "./Cadastro.css";
+import '../../components/Button/button.css'
+import cadastro_img from '../../assets/image/cadastro_img.png'
 
 function Cadastro() {
   return (
@@ -25,6 +26,8 @@ function Cadastro() {
                 <input type="password" placeholder="Confirme sua senha" />
     
                 <button type="submit">Cadastrar</button>
+
+            
               </form>
             </div>
           </div>

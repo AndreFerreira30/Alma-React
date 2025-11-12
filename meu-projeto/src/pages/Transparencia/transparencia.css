@@ -42,6 +42,12 @@
     flex-wrap: wrap;
 }
 
+.trans-balanco button{
+  background-color: #F6CEDD;
+  color: var(--cor5);
+  font-weight:600;
+}
+
 /* --- CELULAR (até 768px) --- */
 @media (max-width: 768px) {
     .mainsec {

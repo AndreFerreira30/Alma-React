@@ -7,7 +7,7 @@
   gap: 60px;
   width: 100%;
   max-width: 1400px;
-  margin: 80px auto 80px auto; /* Centraliza e adiciona respiro */
+  margin: 80px auto 0px auto; /* Centraliza e adiciona respiro */
   box-sizing: border-box; /* evita estourar tela */
   overflow: hidden; /* impede vazar pra fora */
   position: relative;
@@ -40,7 +40,7 @@
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.20);
 }
 
-/* --- CORES IGUAIS AO PRIMEIRO LAYOUT --- */
+
 .projeto1 { background-color: #C1E5DF; }
 .projeto2 { background-color: #F6CEDD; flex-direction: row-reverse; }
 .projeto3 { background-color: #B9C3EE; }
@@ -62,7 +62,7 @@
     gap: 30px;
     padding: 40px 20px;
     border-radius: 0;
-    margin: 40px 0;
+    margin: 40px 0px 0px 0px;
     text-align: center;
   }
 
@@ -90,9 +90,7 @@
 @media (min-width: 768px) and (max-width: 1160px) {
   .projeto {
     flex-direction: column;
-    gap: 40px;
-    padding: 50px 30px;
-    border-radius: 0 40px 0 40px;
+    border-radius: 40px;
   }
 
   .projeto article {

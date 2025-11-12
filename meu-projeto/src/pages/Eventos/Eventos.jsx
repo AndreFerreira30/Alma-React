@@ -1,7 +1,8 @@
-import './codigo_css/index.css'
-import './codigo_css/eventos.css'
-import fundEventos from './assets/image/mainfund_eventos.png'
-import exemploEvent from './assets/image/carousel1.png'
+import'../../components/Button/button.css'
+import '../../index.css'
+import './eventos.css'
+import fundEventos from '../../assets/image/mainfund_eventos.png'
+import exemploEvent from '../../assets/image/exemplo_evento.png'
 
 function Eventos(){
 
@@ -14,9 +15,9 @@ function Eventos(){
     
             <section className='home-section3 home-eventos'>
                 <article>
-                    <h1>Nossa Instituição</h1>
+                    <h1>A Sopa Fraterna</h1>
                     <p>
-                        O Instituto Alma é uma organização sem fins lucrativos com mais de 18 anos de atuação em São Paulo. Nossa essência é promover a transformação social através de ações diferenciadas, com o propósito de encantar e proporcionar experiências únicas e significativas na vida de pessoas em situação de vulnerabilidade, oferecendo dignidade e esperança. 
+                        Em todos os finais de semana, a Sopa Fraterna leva cerca de 2.500 refeições nutritivas às comunidades da Zona Sul e Norte de São Paulo. Nosso objetivo é ir além da alimentação, oferecendo pratos de alta qualidade que resgatam a dignidade e fazem com que cada pessoa se sinta acolhida e especial.
                     </p>
                 </article>
                 <img src={exemploEvent} alt="exemplo" />
@@ -40,7 +41,10 @@ function Eventos(){
                 <div className="facebook-right">
                     <h1>Fique por dentro das novidades</h1>
                     <p>
-                        Não perca nenhuma história de impacto! Siga o Instituto Alma e acompanhe em primeira mão os bastidores do Projeto Alimentar, as ações do Natal de Amor e como levamos dignidade às comunidades da Zona Leste e Norte de São Paulo. A verdadeira mudança está em cada detalhe. Siga-nos!
+                        Não perca nenhuma história de impacto! Siga o Instituto Alma e acompanhe em primeira mão os bastidores do Projeto Alimentar, as ações do Natal de Amor e como levamos dignidade às comunidades da Zona Leste e Norte de São Paulo.
+                    </p>
+                    <p className='destaque'>
+                        A verdadeira mudança está em cada detalhe. Siga-nos!
                     </p>
                 </div>
             </section>

@@ -1,10 +1,11 @@
 import React from "react";
-import './codigo_css/atividades.css'
-import mainFundo from './assets/image/mainfund_atividades.png'
-import atv1 from './assets/image/atv_exemplo1.png'
-import atv2 from './assets/image/atv_exemplo2.png'
-import atv3 from './assets/image/atv_exemplo3.png'
-import atv4 from './assets/image/atv_exemplo4.png'
+import './atividades.css'
+import '../../components/Button/button.css'
+import mainFundo from '../../assets/image/mainfund_atividades.png'
+import atv1 from '../../assets/image/atv_exemplo1.png'
+import atv2 from '../../assets/image/atv_exemplo2.png'
+import atv3 from '../../assets/image/atv_exemplo3.png'
+import atv4 from '../../assets/image/atv_exemplo4.png'
 
 
 function Atividades(){

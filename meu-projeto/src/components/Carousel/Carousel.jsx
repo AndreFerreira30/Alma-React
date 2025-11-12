@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import './codigo_css/Carousel.css'
+import './carousel.css'
 //imagens
-import carousel1 from './assets/image/carousel1.png'
-import carousel2 from './assets/image/carousel2.png'
-import carousel3 from './assets/image/carousel3.png'
-import carousel4 from './assets/image/carousel4.png'
-import carousel5 from './assets/image/carousel5.png'
+import carousel1 from '../../assets/image/carousel1.png'
+import carousel2 from '../../assets/image/carousel2.png'
+import carousel3 from '../../assets/image/carousel3.png'
+import carousel4 from '../../assets/image/carousel4.png'
+import carousel5 from '../../assets/image/carousel5.png'
 
 
 const Carousel = () => {
