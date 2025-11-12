@@ -17,14 +17,14 @@ main > div {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-
 .home-section3-sobre{
-    display: flex;
-    background-color: var(--cor1);
+  background-color: var(--cor1);
+}
+.sobre-nos{
     max-width: auto;
     max-height: 600px;
-    padding-left: 100px;
     gap: 50px;
+    margin-bottom: 20px;
 }
 
 /* TERCEIRA SECTION*/
@@ -97,8 +97,9 @@ main > div {
     font-size: 1.2em;
 }
 .secPrincipios article p{
-    line-height: 1.4;
+    line-height: 1.5;
     text-align: justify;
+    text-indent: 16px;
 }
 
 /*QUINTA SECTION*/
@@ -129,9 +130,10 @@ main > div {
     font-weight: bold;
 }
 .textoPresidente p {
-    line-height: 1.6;
+    line-height: 1.5;
     font-size: 1em;
     text-align: justify;
+    text-indent: 16px;
 }
 .textoDestaque{
   font-weight: bolder;
@@ -152,7 +154,7 @@ main > div {
     .home-section3-sobre {
       flex-direction: column;
       align-items: center;
-      padding: 20px;
+      padding: 40px;
       gap: 20px;
     }
   
@@ -203,22 +205,25 @@ main > div {
   
   /* --- TABLET --- Mudança Vitnho */
 @media (min-width: 768px) and (max-width: 1160px) {
-    main > div img {
-      height: 260px;
-    }
-  
+
     .home-section3-sobre {
-      padding: 40px 40px;
+      padding: 40px;
       gap: 30px;
     }
   
-    .secAcumulados div {
+    .secAcumulados{
       flex-wrap: wrap;
+      justify-content: center;
       gap: 40px;
     }
-  
+
+    .secPrincipios div{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     .secPrincipios article {
-      width: 240px;
+      max-width: 45%; /* 2 cards lado a lado */
+      margin: 15px;
     }
   
     .secPresidente {

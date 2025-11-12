@@ -25,7 +25,8 @@ function Sobrenos(){
                             O Instituto Alma é uma organização sem fins lucrativos com mais de 18 anos de atuação em São Paulo. Nossa essência é promover a transformação social através de ações diferenciadas, com o propósito de encantar e proporcionar experiências únicas e significativas na vida de pessoas em situação de vulnerabilidade, oferecendo dignidade e esperança. Atuamos prioritariamente nas comunidades carentes e isoladas das zonas Norte e Leste da capital, levando a convicção de que todos merecem viver momentos especiais.
                         </p>
                 </article>
-                <img src={exemplo} alt="exemplo" />
+                <img src={exemplo} className="sobre-nos" alt="exemplo" />
+
             </section>
 
             <section className="secAcumulados">

@@ -22,24 +22,38 @@ header img{
 nav{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0px;
     white-space: nowrap;
 }
-a.navegador{
+.navegador{
     text-decoration: none;
     color: var(--cor4);
     transition-duration: 0.5s;
     font-size: 0.9em;
     font-family: var(--font-destaque);
     border-radius: 5px;
-    padding: 13px 15px 3px 15px;
+    padding: 13px 15px 13px 15px;
 }
-a.navegador:hover{
+.navegador:hover{
     background-color: black;
     color: var(--cor2);
     border-radius: 20px;
     transition: none;
 }
+
+.navegador-ativo{
+    background-color: black;
+    color: var(--cor2);
+    border-radius: 20px;
+    transition: none;
+    text-decoration: none;
+    padding: 20px;
+    font-family: var(--font-destaque);
+    transition: all 0.3s ease;
+
+}
+
 
 .hamburguer { 
     display: none; 
@@ -57,7 +71,7 @@ a.navegador:hover{
     background-color: #1D2344; /* amarelo principal */
     color: #fff; /* texto branco */
     text-decoration: none; /* remove o sublinhado */
-    padding: 12px 20px; /* espaçamento interno */
+    padding: 13px 15px; /* espaçamento interno */
     border-radius: 50px; /* bordas arredondadas tipo pílula */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* leve sombra */
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.425);
@@ -66,7 +80,6 @@ a.navegador:hover{
     max-width: 85%;
     text-align: center;
     align-content: center;
-    padding: 15px;
     gap: 10px; 
 }
 
@@ -76,36 +89,75 @@ a.navegador:hover{
     transform: translateY(-2px);
 }
 
+.navegador-login-select{
+    display: block;
+    justify-content: space-between; 
+    font-family: var(--font-destaque);
+    background-color: #2940c2; /* tom mais forte no hover */
+    color: #fff; /* texto branco */
+    text-decoration: none; /* remove o sublinhado */
+    padding: 12px 20px; /* espaçamento interno */
+    border-radius: 50px; /* bordas arredondadas tipo pílula */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.425);
+    transition: all 0.3s ease;
+    width: 90%;
+    max-width: 60%;
+    text-align: center;
+    align-content: center;
+    padding: 20px;
+    gap: 10px;
+}
+
 .navegador-doar {
-  display: block;
-  font-family: var(--font-destaque);
-  background-color: #f7c533; /* amarelo principal */
-  color: #fff; /* texto branco */
-  text-decoration: none; /* remove o sublinhado */
-  padding: 12px 20px; /* espaçamento interno */
-  border-radius: 50px; /* bordas arredondadas tipo pílula */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* leve sombra */
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.425);
-  width: 90%;
-  max-width: 85%;
-  text-align: center;
-  align-content: center;
-  margin-left: 15px;
-  transition: all 0.3s ease;
+    display: block;
+    font-family: var(--font-destaque);
+    background-color: #f7c533; /* amarelo principal */
+    color: #fff; /* texto branco */
+    text-decoration: none; /* remove o sublinhado */
+    padding: 12px 20px; /* espaçamento interno */
+    border-radius: 50px; /* bordas arredondadas tipo pílula */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* leve sombra */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.425);
+    width: 90%;
+    max-width: 85%;
+    text-align: center;
+    align-content: center;
+    margin-left: 15px;
+    transition: all 0.3s ease;
 }
 
 .navegador-doar:hover {
-  background-color: #fcb80d; /* tom mais forte no hover */
+    background-color: #fc6d0d; /* tom mais forte no hover */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
 }
+
+.navegador-doar-select{
+    display: block;
+    font-family: var(--font-destaque);
+    background-color: #fc6d0d; /* tom mais forte no hover */
+    color: #fff; /* texto branco */
+    text-decoration: none; /* remove o sublinhado */
+    padding: 20px; /* espaçamento interno */
+    border-radius: 50px; /* bordas arredondadas tipo pílula */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.425);
+    width: 90%;
+    max-width: 60%;
+    text-align: center;
+    align-content: center;
+    transition: all 0.3s ease;
+}
+
+
 
 
 
 /* =======================================
     RESPONSIVIDADE PARA DISPOSITIVOS INTERMEDIÁRIOS
     ======================================== */
-@media (min-width: 768px) and (max-width: 1160px) {
+@media (min-width: 945px) and (max-width: 1160px) {
 
     /* HEADER: Container principal */
     header {
@@ -132,6 +184,10 @@ a.navegador:hover{
         width: auto;
         padding: 10px 15px; /* Um pouco menos de padding para ficarem mais compactos */
         font-size: 0.9em; /* Diminui levemente a fonte dos botões */
+        transform: translateY(0px);
+    }
+    .navegador-doar-select, .navegador-login-select{
+        transform: translateY(none);
     }
 
 }
@@ -140,7 +196,7 @@ a.navegador:hover{
 /* ================================
    RESPONSIVIDADE PARA CELULARES
    ================================ */
-@media (max-width: 768px) {
+@media (max-width: 945px) {
 
     /* HEADER */
     header {

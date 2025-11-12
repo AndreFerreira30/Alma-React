@@ -17,7 +17,8 @@
   .facebook-left {
     flex: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
   }
   
   .facebook-left iframe{
@@ -29,7 +30,7 @@
   .facebook-right{
     flex: 1;
     max-width: 450px;
-    color: #0e1f36;
+    color: var(--cor5);
     display: flex;
     flex-direction: column;
    
@@ -50,20 +51,6 @@
   font-weight: bolder;
   margin-top: 30px;
 }
-
-  
-  /* mobile */
-  @media(max-width:768px){
-    .facebook-bloco{
-      flex-direction:column;
-      text-align:center;
-      margin:40px 0;
-    }
-  
-    .facebook-right{
-      max-width:90%;
-    }
-  }
   
   /* --- CELULARES (até 768px) Mudança vitinho --- */
 @media (max-width: 768px) {
@@ -76,8 +63,11 @@
   }
 
   .facebook-left iframe {
-    width: 100%;
-    height: 400px;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    max-width: 100%;
+    max-height: auto;
   }
 
   .facebook-right {
@@ -86,6 +76,8 @@
   }
 
   .facebook-right h1 {
+    max-width: auto;
+    max-height: auto;
     font-size: 1.1rem;
     padding: 0 5px;
     text-align: center;
@@ -94,23 +86,36 @@
 
 /* --- Dispositivos Grandes (768px a 1160px) --- Mudança Vitinho */
 @media (min-width: 768px) and (max-width: 1160px) {
+  .home-eventos{
+    padding: 60px 70px;
+  }
   .facebook-bloco {
     flex-direction: column;
     gap: 60px;
     padding: 40px 30px;
+    justify-content: center;
+    align-items: center;
   }
 
   .facebook-left iframe {
-    width: 90%;
-    height: 420px;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    justify-content: center;
+    align-items: center;
   }
 
   .facebook-right {
+    display: flex;
     max-width: 85%;
+    align-items: center;
+    justify-content: center;
   }
 
   .facebook-right h1 {
     font-size: 1.2rem;
     text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 }

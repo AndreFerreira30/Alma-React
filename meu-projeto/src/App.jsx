@@ -12,7 +12,9 @@ import Eventos from './pages/Eventos/Eventos'
 import Ouvidoria from './pages/Ouvidoria/Ouvidoria'
 import Login from "./pages/Login/Login";
 import Cadastro from "./pages/Cadastro/Cadastro";
+import ScrollToTop from './components/ScrollToTop'
 import { Routes, Route } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 //import de imagens
 import imagemPrincipal from './assets/image/imagem-principal.JPG'
@@ -37,8 +39,8 @@ function Home() {
               No Instituto Alma, acreditamos que a verdadeira transformação social acontece quando levamos esperança, dignidade e carinho a quem mais precisa. Nossos projetos são criados para ir além, oferecendo experiências únicas que tocam o coração e mudam histórias. Junte-se a nós nessa missão de construir um futuro mais justo e humano para todos.
             </p>
             <div>
-              <button className='btn-padrao'>saiba mais</button>
-              <button className="btn-destaque">Doe agora</button>
+              <Link to={'/sobrenos'}><button className='btn-padrao'>saiba mais</button></Link>
+              <Link to={'/doador'}><button className="btn-destaque">Doe agora</button></Link>
             </div>
           </div>
           <img className="image-home" src={imagemPrincipal} alt="Sopa comunitaria"/>
@@ -54,7 +56,7 @@ function Home() {
             <p>
               Toda semana, levamos mais que refeições: entregamos carinho e dignidade. Com ingredientes de qualidade e muito cuidado, preparamos 2 mil pratos de sopa e 200 cestas básicas, nutrindo o corpo e a alma.
             </p>
-            <button className="btn-destaque">Saiba mais</button>
+            <Link to='/sobrenos'><button className="btn-destaque" >Saiba mais</button></Link>
           </article>
           <article>
             <img className='imgCreser' src={imgCrescer} alt="fundador do alma segurando caixas de jogos" />
@@ -62,7 +64,7 @@ function Home() {
             <p>
               Apoiamos gestantes em vulnerabilidade do início da gravidez até o sexto mês do bebê, oferecendo afeto, informações e o suporte necessário para uma gestação saudável e um futuro com mais esperança.
             </p>
-            <button className="btn-destaque">Saiba mais</button>
+            <Link to='/sobrenos'><button className="btn-destaque">Saiba mais</button></Link>
           </article>
           <article>
             <img className='natalAmor' src={imgNatalAmor} alt="mãe e filho se abraçando" />
@@ -70,7 +72,7 @@ function Home() {
             <p>
               Transformamos o Natal de 2.500 crianças. Em uma loja de brinquedos especial, elas têm a liberdade de escolher o próprio presente, devolvendo a magia da data e a alegria de ter um sonho realizado.
             </p>
-            <button className="btn-destaque">Saiba mais</button>
+            <Link to='/sobrenos'><button className="btn-destaque">Saiba mais</button></Link>
           </article>
         </div>
       </section>
@@ -106,7 +108,7 @@ function App() {
   return (
     <>
       <Header/>
-
+      <ScrollToTop />
       {/* Aqui o React Router controla qual conteúdo mostrar */}
       <Routes>
         <Route path="/" element={<Home />} />

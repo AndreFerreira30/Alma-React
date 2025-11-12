@@ -44,13 +44,19 @@ main{
     margin: auto;
     background-color:var(--cor1);
     text-align: justify;
-    padding: 100px 0px 0px 0px;
+    padding: 85px 0px 0px 0px;
     font-family: var(--font-texto);
     max-width: 1200px;
     min-width: 400px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.493);
     border-radius: 0 0 10px 10px;
 }
+
+main p{
+  text-indent: 16px;
+  line-height: 1.5;
+}
+
 .image-home{
     max-width: 900px;
     max-height: 500px;
@@ -192,7 +198,6 @@ main div{
       background-color: var(--cor4);
       color: var(--cor1);
       text-align: justify;
-      border-radius: 20px 20px 0 0;
     }
     .home-primeira-texto h1 {
         font-size: 1.8em;
@@ -234,9 +239,10 @@ main div{
       flex-direction: column;
       align-items: center;
       text-align: center;
+      justify-content: center;
       line-height: 1.5;
       text-indent: 16px;
-      padding-left: 30px;
+      padding: 30px;
     }
     .home-section3 article {
       max-width: 100%;
@@ -262,7 +268,7 @@ main div{
     /* MAIN */
     main {
       max-width: 950px; /* menor que o desktop */
-      padding: 80px 20px 0 20px;
+      padding: 64px 0px 0 0px;
     }
   
     .home-primeira {
@@ -271,7 +277,7 @@ main div{
       text-align: justify;
     }
     .home-primeira-texto {
-      width: 100%;          /* deixa texto mais contido */
+      width: auto;          /* deixa texto mais contido */
       padding: 30px 20px;
       font-size: 1em;
     }
@@ -307,10 +313,12 @@ main div{
     .home-section3 {
       flex-direction: column;
       align-items: center;
+      padding: 60px 75px 60px 75px;
     }
   
     .home-section3 article {
       max-width: 90%;
+      padding: 0px;
       margin-bottom: 20px;
     }
   
