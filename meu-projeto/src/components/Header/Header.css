@@ -81,6 +81,7 @@ nav{
     text-align: center;
     align-content: center;
     gap: 10px; 
+    margin: 0px 10px
 }
 
 .navegador-login:hover {
@@ -107,6 +108,7 @@ nav{
     align-content: center;
     padding: 20px;
     gap: 10px;
+    margin: 0px 10px;
 }
 
 .navegador-doar {

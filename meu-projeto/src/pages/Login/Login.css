@@ -121,7 +121,7 @@
   .login-form {
     padding: 30px 25px;
     border-radius: 15px;
-    background: linear-gradient(160deg, #1E2447, #4554A2);
+      background: linear-gradient(180deg, #1a1a46 0%, #4a4ae3 100%);
   }
 
   .login-form h2 {
