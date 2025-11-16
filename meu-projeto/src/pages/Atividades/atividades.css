@@ -36,16 +36,14 @@
 .projeto img {
   width: 500px;
   height: auto;
-  border-radius: 20px;
   object-fit: cover;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.20);
 }
 
 
 .projeto1 { background-color: #C1E5DF; }
-.projeto2 { background-color: #F6CEDD; flex-direction: row-reverse; }
+.projeto2 { background-color: #F6CEDD; }
 .projeto3 { background-color: #B9C3EE; }
-.projeto4 { background-color: #FFDFA4; flex-direction: row-reverse; }
+.projeto4 { background-color: #FFDFA4; }
 
 /* --- BORDA ARREDONDADA ALTERNADA --- */
 .projeto1, .projeto3 {
@@ -66,6 +64,12 @@
     margin: 40px 0px 0px 0px;
     text-align: center;
   }
+
+  .projeto:nth-child(even) { /* Seleciona o 2º, 4º, etc. elemento (índices 1, 3, etc.) */
+    flex-direction: column-reverse; /* Inverte a ordem: Texto sobe, Imagem desce */
+  }
+
+
 
   .projeto article {
     max-width: 100%;
@@ -92,6 +96,10 @@
   .projeto {
     flex-direction: column;
     border-radius: 40px;
+  }
+
+  .projeto:nth-child(even) { 
+    flex-direction: column-reverse; /* Inverte a ordem: Texto sobe, Imagem desce */
   }
 
   .projeto article {

@@ -4,6 +4,14 @@
     background-color: var(--cor1);
   }
 
+  .home-eventos img{
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+
+
+  }
+
   .facebook-bloco{
     display: flex;
     justify-content: center;

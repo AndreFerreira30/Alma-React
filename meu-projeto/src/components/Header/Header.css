@@ -90,6 +90,36 @@ nav{
     transform: translateY(-2px);
 }
 
+.usuario-logado {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  padding: 8px 12px;
+  background: #ffffffbe;
+  border-radius: 10px;
+}
+
+.icone-usuario {
+  font-size: 22px;
+}
+
+.btn-sair {
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-sair:hover {
+  background: #c83737;
+}
+
+
+
 .navegador-login-select{
     display: block;
     justify-content: space-between; 

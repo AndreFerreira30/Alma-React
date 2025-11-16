@@ -1,341 +1,104 @@
-/*.doador-titulo{
-/*    padding: 0px 0px 0px 16px;
-/*}
-/*
-/*.doador-lista {
-/*    padding: 0px 10px 20px 10px;
-/*}
-/*  
-/*  .doador-lista > ul {
-/*    list-style: none;        
-/*    padding: 0;
-/*    margin: 0;
-/*    border: 5px solid var(--cor3);
-/*    background-color: var(--cor2);
-/*    border-radius: 5px;       
-/*    overflow: hidden;         
-/*  }
-/*  
-/*  .doador-lista > ul li {
-/*    display: grid;            
-/*    grid-template-columns: max-content 1fr; 
-/*    padding: 10px 15px;
-/*    border-bottom: 1px solid #969696; 
-/*  }
-/*
-/*  .doador-lista > ul li div {
-/*    font-weight: bold;
-/*    padding-right: 10px;
-/*    border-right: 1px solid #999; /* divisória entre nome e email */
-/*  }
-/*
-/*  .doador-lista > ul li span {
-/*    padding-left: 10px;
-/*  }
-/*  
-/*  .doador-lista > ul li:last-child {
-/*    border-bottom: none;      
-/*  }
-/*  
-* --- CELULARES (até 768px) --- */
-/*@media (max-width: 768px) {
-/*  .doador-titulo {
-/*    padding: 0 8px;
-/*    font-size: 1.1rem;
-/*    text-align: center;
-/*  }
-/*
-/*  .doador-lista {
-/*    padding: 0 5px 15px 5px;
-/*  }
-/*
-/*  .doador-lista > ul {
-/*    border-width: 3px;
-/*    border-radius: 4px;
-/*  }
-/*
-/*  .doador-lista > ul li {
-/*    display: flex;
-/*    flex-direction: column; /* empilha nome e e-mail */
-/*    padding: 8px 10px;
-/*    text-align: left;
-/*  }
-/*
-/*  .doador-lista > ul li div {
-/*    border-right: none;
-/*    padding-right: 0;
-/*    margin-bottom: 4px;
-/*  }
-/*
-/*  .doador-lista > ul li span {
-/*    padding-left: 0;
-/*    font-size: 0.95rem;
-/*    color: #222;
-/*  }
-/*}
-/*
-* --- Dispositivos Grandes (768px a 1160px) --- */
-/*@media (min-width: 768px) and (max-width: 1160px) {
-/*  .doador-lista {
-/*    padding: 0 20px 25px 20px;
-/*  }
-/*
-/*  .doador-lista > ul {
-/*    border-width: 4px;
-/*  }
-/*
-/*  .doador-lista > ul li {
-/*    grid-template-columns: 140px 1fr;
-/*    padding: 10px 15px;
-/*  }
-/*
-/*  .doador-lista > ul li div {
-/*    font-size: 1rem;
-/*  }
-/*
-/*  .doador-lista > ul li span {
-/*    font-size: 0.95rem;
-/*  }
-/*}
-/**/
 
-main > div {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-main > div img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  filter: brightness(0.6);
-}
-
-main > div h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.home-section3-sobre{
-  display: flex;
-  background-color: var(--cor1);
-  max-width: auto;
-  max-height: 600px;
-  padding-left: 100px;
-  gap: 50px;
-}
-
-/* TERCEIRA SECTION*/
-
-.secAcumulados{
-  text-align: center;
-  background-color: #F9D4E5;
-  padding: 60px 10%;
-  color: var(--cor4);
-}
-
-
-.secAcumulados h2{
-  margin-bottom: 10px;
-}
-.secAcumulados div{
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-}
-.secAcumulados p{
-text-align: center;
-margin-bottom: 20px;
-}
-.secAcumulados article{
-  line-height: 1.5;
-}
-.letraMinuscula{
-  font-size: 1.0em;
-  font-weight: lighter;
-}
-
-
-/*QUARTA SECTION*/
-.secPrincipios{
-  background-color: var(--cor2);
-  padding: 60px 10%;
-  text-align: center;
-}
-.secPrincipios h1{
-  margin-bottom: 40px;
-}
-.secPrincipios h1::after {
-content: "";
-display: block;
-width: 90%;         /* ajuste o tamanho da linha */
-height: 2px;        /* espessura */
-background: #162039;
-margin: 12px auto 0 auto; /* centraliza a linha */
-opacity: 0.8;       /* deixa um leve suavizado igual ao da imagem */
-}
-.secPrincipios div{
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-.secPrincipios article{
-  background-color: #1a355b;
-  color: white;
-  border-radius: 10px;
-  padding: 30px 20px;
-  width: 280px;
-}
-.secPrincipios article img{
-  width: 40px;
-  margin-bottom: 15px;
-}
-.secPrincipios article h2{
-  margin-bottom: 10px;
-  font-size: 1.2em;
-}
-.secPrincipios article p{
-  line-height: 1.4;
-  text-align: justify;
-}
-
-/*QUINTA SECTION*/
-.secPresidente{
-  background-color: #e6f3ec;
-  padding: 60px 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  color: var(--cor4);
-}
-.secPresidente img{
-  width: 400px;
-  border-radius: 50% 50% 40% 40%;
-  object-fit: cover;
-}
-
-.textoPresidente{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 60%;
-}
-.textoPresidente h1{
-  font-size: 2.5em;
-  text-align: start;
-  font-weight: bold;
-}
-.textoPresidente p {
-  line-height: 1.6;
-  font-size: 1em;
-  text-align: justify;
-}
-.textoDestaque{
-font-weight: bolder;
-}
-
-/* --- CELULAR --- Mudança Vitinho */
-@media (max-width: 768px) {
-  main > div img {
-    height: 200px;
-  }
-
-  main > div h1 {
-    font-size: 1.6em;
-    text-align: center;
-    width: 90%;
-  }
-
-  .home-section3-sobre {
+.sec-doacao-principal .conteudo-doacao-overlay {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    gap: 20px;
-  }
+}
 
-  .secAcumulados {
-    padding: 40px 6%;
-  }
-
-  .secAcumulados div {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .secPrincipios {
-    padding: 40px 6%;
-  }
-
-  .secPrincipios div {
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-  }
-
-  .secPrincipios article {
-    width: 90%;
-    max-width: 350px;
-  }
-
-  .secPresidente {
-    flex-direction: column;
+/* TÍTULO */
+.sec-doacao-principal h1 {
     text-align: center;
-    gap: 30px;
-    padding: 40px 6%;
-  }
+    margin-top: 30px;
+    margin-bottom: 35px;
+    padding: 0 15px;
+}
 
-  .secPresidente img {
-    width: 250px;
-  }
-
-  .textoPresidente {
+/* CONTAINER DOS CARDS */
+.opcoes-doacao-container {
     width: 100%;
-  }
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding-bottom: 50px;
+}
 
-  .textoPresidente h1 {
-    font-size: 1.8em;
+/* CARD */
+.card-doacao {
+    background: #F4F5F7;
+    border-radius: 18px;
+    padding: 25px 18px;
+    width: calc(25% - 25px);
+    min-width: 230px;
     text-align: center;
-  }
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.25s ease;
 }
 
-/* --- TABLET --- Mudança Vitnho */
-@media (min-width: 768px) and (max-width: 1160px) {
-  main > div img {
-    height: 260px;
-  }
-
-  .home-section3-sobre {
-    padding: 40px 40px;
-    gap: 30px;
-  }
-
-  .secAcumulados div {
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-
-  .secPrincipios article {
-    width: 240px;
-  }
-
-  .secPresidente {
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-
-  .secPresidente img {
-    width: 320px;
-  }
-
-  .textoPresidente {
-    width: 80%;
-  }
-
-  .textoPresidente h1 {
-    font-size: 2em;
-  }
+.card-doacao:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
 }
+
+/* VALOR */
+.card-doacao h3 span {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #2e2e2e;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* DESCRIÇÃO */
+.card-doacao h3 {
+    font-size: 1rem;
+    color: #3e3e3e;
+    font-weight: 500;
+    line-height: 1.35;
+    margin-bottom: 15px;
+}
+
+/* BOTÃO */
+.card-doacao button {
+    background: #6477a4;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 11px 25px;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.card-doacao button:hover {
+    background-color: #4c5e84;
+}
+
+/* ===========================================
+   RESPONSIVIDADE
+=========================================== */
+
+@media (max-width: 1024px) {
+    .sec-doacao-principal h1 {
+        font-size: 2.2rem;
+    }
+    .card-doacao {
+        width: calc(33.3% - 25px);
+    }
+}
+
+@media (max-width: 768px) {
+    .sec-doacao-principal h1 {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+    .card-doacao {
+        width: calc(50% - 20px);
+    }
+}
+
+

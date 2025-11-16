@@ -56,7 +56,7 @@ function Home() {
             <p>
               Toda semana, levamos mais que refeições: entregamos carinho e dignidade. Com ingredientes de qualidade e muito cuidado, preparamos 2 mil pratos de sopa e 200 cestas básicas, nutrindo o corpo e a alma.
             </p>
-            <Link to='/sobrenos'><button className="btn-destaque" >Saiba mais</button></Link>
+            <Link to='/atividades'><button className="btn-destaque" >Saiba mais</button></Link>
           </article>
           <article>
             <img className='imgCreser' src={imgCrescer} alt="fundador do alma segurando caixas de jogos" />
@@ -64,7 +64,7 @@ function Home() {
             <p>
               Apoiamos gestantes em vulnerabilidade do início da gravidez até o sexto mês do bebê, oferecendo afeto, informações e o suporte necessário para uma gestação saudável e um futuro com mais esperança.
             </p>
-            <Link to='/sobrenos'><button className="btn-destaque">Saiba mais</button></Link>
+            <Link to='/atividades'><button className="btn-destaque">Saiba mais</button></Link>
           </article>
           <article>
             <img className='natalAmor' src={imgNatalAmor} alt="mãe e filho se abraçando" />
@@ -72,7 +72,7 @@ function Home() {
             <p>
               Transformamos o Natal de 2.500 crianças. Em uma loja de brinquedos especial, elas têm a liberdade de escolher o próprio presente, devolvendo a magia da data e a alegria de ter um sonho realizado.
             </p>
-            <Link to='/sobrenos'><button className="btn-destaque">Saiba mais</button></Link>
+            <Link to='/atividades'><button className="btn-destaque">Saiba mais</button></Link>
           </article>
         </div>
       </section>
