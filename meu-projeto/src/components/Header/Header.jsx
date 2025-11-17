@@ -50,6 +50,18 @@ function Header() {
 
                 <NavLink to="/ouvidoria" className={({ isActive }) => isActive ? "navegador-ativo" : "navegador"} onClick={closeMenu}>OUVIDORIA</NavLink>
 
+                    {/* APENAS ADMINISTRADORES */}
+                {usuario && (usuario.isAdmin === true || usuario.isAdmin === "true") && (
+                <NavLink
+                    to="/admin"
+                    className={({ isActive }) => isActive ? "navegador-ativo" : "navegador"}
+                    onClick={closeMenu}
+                >
+                ADMINISTRADOR
+                </NavLink>
+)}
+
+
                 {/* SOMENTE MOSTRA "ENTRAR" SE NÃO ESTIVER LOGADO */}
                 {!usuario && (
                     <NavLink to="/login"
@@ -59,7 +71,7 @@ function Header() {
                     </NavLink>
                 )}
 
-                {/* USUÁRIO LOGADO → MOSTRAR NOME + ICONE + LOGOUT */}
+                {/* USUÁRIO LOGADO  MOSTRAR NOME + ICONE + LOGOUT */}
                 {usuario && (
                     <div className="usuario-logado">
                         <FaUserCircle className="icone-usuario" />

@@ -60,7 +60,7 @@
     background: #333;
 }
 
-/* --- CELULARES (até 768px) --- Mudança Vitinho */
+/* --- CELULARES (até 768px) --- */
 @media (max-width: 768px) {
     .carousel {
       max-width: 100%;
@@ -87,7 +87,7 @@
     }
   }
 
-  /* --- Dispositivos Grandes (768px a 1160px) Mudança Vitinho --- */
+  /* --- Dispositivos Grandes (768px a 1160px) --- */
 @media (min-width: 768px) and (max-width: 1160px) {
     .carousel {
       max-width: 700px;

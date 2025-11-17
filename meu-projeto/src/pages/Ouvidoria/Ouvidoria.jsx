@@ -4,7 +4,7 @@ import './ouvidoria.css';
 import '../../components/Button/button.css';
 import fundOuvidoria from '../../assets/image/mainfund_ouvidoria.png';
 
-const API_BASE_URL = 'https://localhost:7171'; 
+const API_BASE_URL = 'https://ads2-2025-2-djcbfjadeparacd0.eastus-01.azurewebsites.net'; 
 
 function Ouvidoria (){
     // 1. Estados para capturar os dados do formulário

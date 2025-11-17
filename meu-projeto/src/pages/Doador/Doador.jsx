@@ -18,7 +18,7 @@ function Doador() {
         try {
             const token = localStorage.getItem("token");
 
-            const response = await fetch("httpS://localhost:7171/api/doacao", { 
+            const response = await fetch("https://ads2-2025-2-djcbfjadeparacd0.eastus-01.azurewebsites.net/api/doacao", { 
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

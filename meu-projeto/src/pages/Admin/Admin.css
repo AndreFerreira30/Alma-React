@@ -1,0 +1,43 @@
+.admin-container {
+    padding: 25px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.admin-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.admin-menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.admin-menu button {
+    padding: 10px 15px;
+    border: none;
+    background: #0056b3;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.admin-menu button:hover {
+    background: #003e82;
+}
+
+.admin-content {
+    background: #f7f7f7;
+    padding: 25px;
+    border-radius: 10px;
+    min-height: 300px;
+    border: 1px solid #ddd;
+}

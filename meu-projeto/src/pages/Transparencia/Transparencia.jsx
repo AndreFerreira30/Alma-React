@@ -4,8 +4,7 @@ import "./transparencia.css";
 import '../../components/Button/button.css';
 import mainfundo from "../../assets/image/mainfund_transparencia.png";
 
-// Definição da URL base da API (Ajuste para a URL correta do seu backend)
-const API_BASE_URL = "https://localhost:7171"; 
+const API_BASE_URL = "https://ads2-2025-2-djcbfjadeparacd0.eastus-01.azurewebsites.net"; 
 const API_URL_TRANSPARENCIA = `${API_BASE_URL}/api/Transparencia`;
 
 function Transparencia (){
@@ -14,9 +13,9 @@ function Transparencia (){
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    // **********************************
+
     // 2. EFEITO: Chamar a API ao carregar o componente
-    // **********************************
+   
     useEffect(() => {
         fetch(API_URL_TRANSPARENCIA)
             .then(response => {
@@ -46,9 +45,8 @@ function Transparencia (){
         window.open(downloadUrl, '_blank');
     };
 
-    // **********************************
+
     // 4. RENDERIZAÇÃO CONDICIONAL: Mensagens de estado
-    // **********************************
     if (loading) {
         return <main><div><h1>Carregando Balanços...</h1></div></main>;
     }
@@ -57,9 +55,8 @@ function Transparencia (){
         return <main><div><h1 style={{ color: 'red', textAlign: 'center' }}>{error}</h1></div></main>;
     }
 
-    // **********************************
+
     // 5. ESTRUTURA FINAL: Renderização dinâmica
-    // **********************************
     return(
         <main>
             <div>
@@ -73,8 +70,9 @@ function Transparencia (){
                     <article>
                         <h1>Nosso Compromisso</h1>
                         <p>O Instituto Alma adota práticas rigorosas de governança que privilegiam a transparência absoluta, disponibilizando informações detalhadas sobre suas ações e movimentação financeira. Isso garante a segurança e credibilidade da nossa ONG junto a doadores, parceiros, voluntários e as cerca de 1.000 famílias que auxiliamos</p>
-                        {/* Se o Estatuto também vier da API, você precisará de outro GET */}
-                        <button>Nosso Estatuto</button>
+                        <a href="/public/estatuto_instituto_alma.pdf"
+                        download="estatuto_Instituto_Alma.pdf"
+                        ><button>Nosso Estatuto</button></a>
                     </article>
                 </section>
                 

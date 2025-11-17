@@ -17,7 +17,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://localhost:7171/api/Usuarios/login", {
+      const response = await fetch("https://ads2-2025-2-djcbfjadeparacd0.eastus-01.azurewebsites.net/api/Usuarios/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -27,25 +27,41 @@ function Login() {
 
       const data = await response.json();
 
-      // ❌ Login inválido
+      //Login inválido
       if (!response.ok) {
         setMensagemSucesso("");
         setMensagemErro(data.message || "Credenciais inválidas.");
         return;
       }
 
-      // ✅ Login OK
+      // Exibe no console para garantir que IsAdmin veio corretamente
+      console.log("USUÁRIO LOGADO:", data.usuario);
+
+      // Limpa mensagens e confirma sucesso
       setMensagemErro("");
       setMensagemSucesso("Login realizado com sucesso!");
 
-      // --- SALVANDO USUÁRIO NO LOCALSTORAGE ---
+      // SALVANDO TOKEN & USUÁRIO 
       localStorage.setItem("token", data.token);
-      localStorage.setItem("usuario", JSON.stringify(data.usuario));
 
-      // Aguarda 1.5s antes de redirecionar
+      // Garante que o campo IsAdmin exista corretamente no localStorage
+      const usuarioFormatado = {
+        id: data.usuario.id,
+        nome: data.usuario.nome,
+        email: data.usuario.email,
+        isAdmin: data.usuario.isAdmin ?? data.usuario.IsAdmin ?? false
+      };
+
+      localStorage.setItem("usuario", JSON.stringify(usuarioFormatado));
+
+      // Delay antes de navegar
       setTimeout(() => {
-        navigate("/doador");
-        window.location.reload(); // força o Header atualizar
+        if (usuarioFormatado.isAdmin) {
+          navigate("/admin");
+        } else {
+          navigate("/doador");
+        }
+        window.location.reload(); // atualiza Header
       }, 1500);
 
     } catch (error) {
@@ -65,7 +81,6 @@ function Login() {
         <div className="login-form">
           <h2>Login</h2>
 
-          {/* Mensagens */}
           {mensagemErro && <p className="msg-erro">{mensagemErro}</p>}
           {mensagemSucesso && <p className="msg-sucesso">{mensagemSucesso}</p>}
 

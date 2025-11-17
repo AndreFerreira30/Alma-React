@@ -12,6 +12,7 @@ import Eventos from './pages/Eventos/Eventos'
 import Ouvidoria from './pages/Ouvidoria/Ouvidoria'
 import Login from "./pages/Login/Login";
 import Cadastro from "./pages/Cadastro/Cadastro";
+import Admin from './pages/Admin/Admin'
 import ScrollToTop from './components/ScrollToTop'
 import { Routes, Route } from "react-router-dom";
 import { Link } from 'react-router-dom';
@@ -120,6 +121,7 @@ function App() {
         <Route path= "/ouvidoria" element={<Ouvidoria />}/>
         <Route path="/login" element={<Login />} />
         <Route path="/Cadastro" element={<Cadastro />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
 
       <Footer/>

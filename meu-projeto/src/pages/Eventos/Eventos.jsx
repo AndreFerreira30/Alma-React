@@ -4,8 +4,8 @@ import '../../index.css';
 import './eventos.css';
 import fundEventos from '../../assets/image/mainfund_eventos.png';
 
-// 🛑 A URL BASE DO SEU BACKEND FOI ATUALIZADA AQUI:
-const API_BASE_URL = 'https://localhost:7171'; 
+
+const API_BASE_URL = 'https://ads2-2025-2-djcbfjadeparacd0.eastus-01.azurewebsites.net'; 
 
 function Eventos() {
     const [eventos, setEventos] = useState([]);
@@ -15,7 +15,6 @@ function Eventos() {
     useEffect(() => {
         const fetchEventos = async () => {
             try {
-                // A chamada à API usa a nova URL base
                 const response = await fetch(`${API_BASE_URL}/api/Eventos`); 
                 
                 if (!response.ok) {
@@ -65,7 +64,6 @@ function Eventos() {
                             })}
                         </p>
                     </article>
-                    {/* O caminho da imagem agora é construído com a nova URL base */}
                     <img 
                         src={`${API_BASE_URL}${evento.linkImagem}`} 
                         alt={evento.titulo} 

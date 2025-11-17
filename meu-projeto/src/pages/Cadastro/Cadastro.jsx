@@ -57,7 +57,7 @@ function Cadastro() {
     const enviarDados = async () => {
       try {
         const response = await fetch(
-          "https://localhost:7171/api/Usuarios/register",
+          "https://ads2-2025-2-djcbfjadeparacd0.eastus-01.azurewebsites.net/api/Usuarios/register",
           {
             method: "POST",
             headers: {
