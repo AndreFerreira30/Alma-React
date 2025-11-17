@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaBars } from "react-icons/fa";
 import { Link, NavLink } from 'react-router-dom';
 import '../../index.css';
-import './header.css';
+import './Header.css';
 import '../Button/button.css';
 import logo from '../../assets/image/logo-escura-pqn2.png';
 import { FaUserCircle } from "react-icons/fa";
