@@ -2,7 +2,7 @@ import logoClarapqn from '../../assets/image/logo-clara-pqn.png'
 import facebookIcon from '../../assets/image/facebook-icon.png'
 import instagramIcon from '../../assets/image/instagram-icon.png'
 import mapsimg from '../../assets/image/maps-img.png'
-import './footer.css'
+import './Footer.css'
 
 function Footer(){
     return(
