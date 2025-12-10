@@ -8,38 +8,47 @@ import logo from '../../assets/image/logo-escura-pqn2.png';
 import { FaUserCircle } from "react-icons/fa";
 
 function Header() {
-    const [abrirMenu, setAbrirMenu] = useState(false);
-    const [usuario, setUsuario] = useState(null);
+    const [abrirMenu, setAbrirMenu] = useState(false); // controla os estados do menu (aberto:true, fechado:false)
+    const [usuario, setUsuario] = useState(null); //  Controla o estado do usuario guardando seus dados (ou null quando não estiver logado) 
 
+    //Utilizado para manter o login mesmo após atualizar a pagina
     useEffect(() => {
-        const userData = localStorage.getItem("usuario");
-        if (userData) {
-            setUsuario(JSON.parse(userData));
+        const userData = localStorage.getItem("usuario"); // busca no localStorage se existe algum usuario salvo
+        if (userData) { // caso exista 
+            setUsuario(JSON.parse(userData)); //executa um setUsuarios para guardar os dados do mesmo no nosso estado (usuario)
         }
-    }, []);
+    }, []); // esta arquitetura de useEffect faz com que ele seja executado no inicio da montagem do componente, e assim sendo executado apenas 1 vez
 
+
+    //função para deslogar
     const logout = () => {
-        localStorage.removeItem("token");
-        localStorage.removeItem("usuario");
-        setUsuario(null);
-        window.location.href = "/";
+        localStorage.removeItem("token"); //remove o token JTW do usuario do localStorage
+        localStorage.removeItem("usuario"); //remove os dados do usuario, do localStorage
+        setUsuario(null); // define nosso estado (usuario) como null, estando deslogado
+        window.location.href = "/"; // redireciona a pagina para a home, no caso ("/")
     };
 
+    //Função para abrir o menu Hamburguer (em telas menores)
     const toggleMenu = () => setAbrirMenu(!abrirMenu);
+    //Função para fechar o menu Hamburguer (em telas menores)
     const closeMenu = () => setAbrirMenu(false);
 
     return (
         <header>
+            {/*Anexa a imagem da logo a função de ir a pagina principal*/}
             <Link to="/">
                 <img src={logo} alt="Logo instituto Alma" />
             </Link>
 
+            {/*Menu hamburguer que aparece apenas em telas menores */}
             <button className='hamburguer' onClick={toggleMenu}>
-                <FaBars size={24} />
+                <FaBars size={24} /> {/*Icone para o menu*/}
             </button>
 
+            
             <nav className={`menu ${abrirMenu ? "nav-active" : ""}`}>
 
+                {/*Utilizando NavLink para melhor experiencia do usuario no controle de qual pagina esta no momento */}
                 <NavLink to="/sobrenos" className={({ isActive }) => isActive ? "navegador-ativo" : "navegador"} onClick={closeMenu}>SOBRE NÓS</NavLink>
 
                 <NavLink to="/atividades" className={({ isActive }) => isActive ? "navegador-ativo" : "navegador"} onClick={closeMenu}>ATIVIDADES</NavLink>
@@ -58,8 +67,7 @@ function Header() {
                     onClick={closeMenu}
                 >
                 ADMINISTRADOR
-                </NavLink>
-)}
+                </NavLink> )}
 
 
                 {/* SOMENTE MOSTRA "ENTRAR" SE NÃO ESTIVER LOGADO */}

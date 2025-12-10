@@ -13,8 +13,9 @@ export default function CrudTransparencia() {
 
   useEffect(() => {
     listarDocs();
-  }, []);
+  }, []); {/*executa assim que montado os compomentes */}
 
+  {/*Realiza um GET para listar todos os documentos */}
   const listarDocs = async () => {
     try {
       const response = await fetch(apiUrl);
@@ -25,36 +26,43 @@ export default function CrudTransparencia() {
     }
   };
 
+  {/*Realiza um POST ou PUT de um documento */}
   const enviarFormulario = async (e) => {
     e.preventDefault();
 
+    // Valida se existe título e arquivo PDF (arquivo obrigatório apenas no POST)
     if (!titulo || (!pdfFile && !editId)) {
       alert("Título e arquivo PDF são obrigatórios!");
       return;
     }
 
-    const formData = new FormData();
-    formData.append("Titulo", titulo);
-    formData.append("Descricao", descricao);
+    const formData = new FormData(); // FormData permite enviar arquivos (multipart/form-data)
+    formData.append("Titulo", titulo); // Adiciona o título ao corpo da requisição
+    formData.append("Descricao", descricao); // Adiciona a descrição
+
+      // Se um novo PDF foi escolhido, anexa o arquivo
     if (pdfFile) formData.append("PdfFile", pdfFile);
 
+    // Se editId existe → PUT (atualizar). Caso contrário → POST (criar)
     const method = editId ? "PUT" : "POST";
+
+    // URL muda caso esteja atualizando
     const url = editId ? `${apiUrl}/${editId}` : apiUrl;
 
     try {
       const response = await fetch(url, {
-        method,
-        body: formData,
-        headers: {
-          Authorization: `Bearer ${token}`,
+        method, // POST ou PUT
+        body: formData, // Envia o PDF e campos
+        headers: {  
+          Authorization: `Bearer ${token}`, // Permite acesso apenas para usuários logados/admins
         },
       });
 
       if (!response.ok) throw new Error("Erro ao salvar");
 
       alert(editId ? "Documento atualizado!" : "Documento enviado!");
-      resetarForm();
-      listarDocs();
+      resetarForm(); // Limpa os campos
+      listarDocs(); // Atualiza a lista na tela
     } catch (error) {
       alert("Erro ao salvar o documento.");
     }

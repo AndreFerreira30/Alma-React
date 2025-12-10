@@ -8,13 +8,10 @@ const API_BASE_URL = "https://ads2-2025-2-djcbfjadeparacd0.eastus-01.azurewebsit
 const API_URL_TRANSPARENCIA = `${API_BASE_URL}/api/Transparencia`;
 
 function Transparencia (){
-    // 1. ESTADO: Armazenar a lista de documentos
+    
     const [documentos, setDocumentos] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-
-
-    // 2. EFEITO: Chamar a API ao carregar o componente
    
     useEffect(() => {
         fetch(API_URL_TRANSPARENCIA)
@@ -36,17 +33,15 @@ function Transparencia (){
             });
     }, []);
 
-    // 3. FUNÇÃO: Lidar com o clique do botão para iniciar o download
+    // Lidar com o clique do botão para iniciar o download
     const handleDownload = (docId) => {
-        // A API de download é: /api/Transparencia/download/{id}
         const downloadUrl = `${API_URL_TRANSPARENCIA}/download/${docId}`;
-        
         // Abre o link em uma nova janela para forçar o download
         window.open(downloadUrl, '_blank');
     };
 
 
-    // 4. RENDERIZAÇÃO CONDICIONAL: Mensagens de estado
+    // RENDERIZAÇÃO CONDICIONAL: Mensagens de estado
     if (loading) {
         return <main><div><h1>Carregando Balanços...</h1></div></main>;
     }
@@ -56,7 +51,7 @@ function Transparencia (){
     }
 
 
-    // 5. ESTRUTURA FINAL: Renderização dinâmica
+    // ESTRUTURA FINAL: Renderização dinâmica
     return(
         <main>
             <div>
@@ -65,7 +60,6 @@ function Transparencia (){
             </div>
 
             <section className="mainsec">
-                {/* 1. SEÇÃO COMPROMISSO (Estática) */}
                 <section className="trans-conpromisso">
                     <article>
                         <h1>Nosso Compromisso</h1>
@@ -76,7 +70,7 @@ function Transparencia (){
                     </article>
                 </section>
                 
-                {/* 2. SEÇÃO BALANÇO FINANCEIRO (Dinâmica) */}
+
                 <section className="trans-balanco">
                     <h1>Balanço Financeiro</h1>
                     <div className="balanco-botoes-container">

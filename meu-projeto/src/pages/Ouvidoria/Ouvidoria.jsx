@@ -7,14 +7,14 @@ import fundOuvidoria from '../../assets/image/mainfund_ouvidoria.png';
 const API_BASE_URL = 'https://ads2-2025-2-djcbfjadeparacd0.eastus-01.azurewebsites.net'; 
 
 function Ouvidoria (){
-    // 1. Estados para capturar os dados do formulário
+    
     const [email, setEmail] = useState('');
     const [titulo, setTitulo] = useState(''); 
     const [descricao, setDescricao] = useState('');
     const [status, setStatus] = useState(''); // Para feedback ao usuário
     const [loading, setLoading] = useState(false);
     
-    // 2. Função para obter o token JWT
+    //  Função para obter o token JWT
     const getAuthToken = () => {
         return localStorage.getItem("token"); // agora pega o token real salvo no login
     };
@@ -32,7 +32,7 @@ function Ouvidoria (){
             return;
         }
 
-        // Seu backend usa [FromForm], então enviamos FormData
+        // O backend usa [FromForm], então usamos FormData
         const formData = new FormData();
         formData.append('Titulo', titulo);
         formData.append('Descricao', descricao);

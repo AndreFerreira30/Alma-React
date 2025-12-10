@@ -13,38 +13,46 @@ export default function CrudUsuarios() {
 
   useEffect(() => {
     carregarUsuarios();
-  }, []);
+  }, []); {/*Executa (carregarUsuarios) apenas uma vez assim que o componente é montado */}
 
   const carregarUsuarios = async () => {
     try {
-      const response = await fetch(apiUrl, {
+      {/*Executa uma função get passando o token*/}
+      const response = await fetch(apiUrl, { 
         headers: { Authorization: `Bearer ${token}` },
       });
+      {/*Transforma o response em um objeto Javascript */}
       const data = await response.json();
+
+      {/*Alimenta nosso estado lista[] */}
       setLista(data);
     } catch (error) {
       console.log("Erro ao carregar usuários:", error);
     }
   };
 
+
+  {/*Função para editar um usuario */}
   const enviarFormulario = async (e) => {
     e.preventDefault();
 
-    if (!nome || !email) {
+    if (!nome || !email) { {/*Valida se tem email e nome*/}
       alert("Nome e e-mail são obrigatórios!");
       return;
     }
 
+    {/*Monta o objeto para envio para o backend */}
     const dados = {
       Nome: nome,
       Email: email,
       Senha: senha || null,
     };
 
+    {/*Executa a função PUT que atualiza o usuario em expecifico, passando (dados) como parametro e o token para autentificação de que é um admin que esta realizando a ação */}
     try {
       const response = await fetch(`${apiUrl}/${editId}`, {
         method: "PUT",
-        body: JSON.stringify(dados),
+        body: JSON.stringify(dados), 
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
@@ -61,8 +69,10 @@ export default function CrudUsuarios() {
     }
   };
 
+
+  {/*Função deletar Usuario */}
   const deletarUsuario = async (id) => {
-    if (!confirm("Deseja excluir este usuário permanentemente?")) return;
+    if (!confirm("Deseja excluir este usuário permanentemente?")) return; {/*Confirmação para o delete */}
 
     try {
       await fetch(`${apiUrl}/${id}`, {
