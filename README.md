@@ -61,31 +61,32 @@ Este repositório contém o **frontend em React + Vite**, totalmente integrado �
 
 ---
 
-## 📂 Estrutura do Projeto
+📂 Estrutura do Projeto
 src/
 │
-├── assets/ # imagens, ícones, PDFs
+├── assets/               # imagens, ícones, PDFs
 │
-├── components/ # componentes reutilizáveis
-│ ├── Button/
-│ ├── Carousel/
-│ ├── Footer/
-│ ├── Header/
-│ └── ScrollToTop.jsx
+├── components/           # componentes reutilizáveis
+│   ├── Button/
+│   ├── Carousel/
+│   ├── Footer/
+│   ├── Header/
+│   └── ScrollToTop.jsx
 │
-├── pages/ # páginas completas
-│ ├── Admin/
-│ ├── Atividades/
-│ ├── Cadastro/
-│ ├── Doador/
-│ ├── Eventos/
-│ ├── Login/
-│ ├── Ouvidoria/
-│ ├── SobreNos/
-│ └── Transparencia/
+├── pages/                # páginas completas
+│   ├── Admin/
+│   ├── Atividades/
+│   ├── Cadastro/
+│   ├── Doador/
+│   ├── Eventos/
+│   ├── Login/
+│   ├── Ouvidoria/
+│   ├── SobreNos/
+│   └── Transparencia/
 │
-├── App.jsx # rotas e estrutura geral
-└── main.jsx # renderização principal
+├── App.jsx               # rotas e estrutura geral
+└── main.jsx              # renderização principal
+
 
 
 Essa divisão segue o padrão recomendado para aplicações React profissionais.
