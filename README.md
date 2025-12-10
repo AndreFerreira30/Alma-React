@@ -62,6 +62,7 @@ Este repositório contém o **frontend em React + Vite**, totalmente integrado �
 ---
 
 📂 Estrutura do Projeto
+```
 src/
 │
 ├── assets/               # imagens, ícones, PDFs
@@ -86,7 +87,7 @@ src/
 │
 ├── App.jsx               # rotas e estrutura geral
 └── main.jsx              # renderização principal
-
+```
 
 Essa divisão segue o padrão recomendado para aplicações React profissionais.
 
