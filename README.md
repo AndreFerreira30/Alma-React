@@ -59,7 +59,7 @@ Este repositório contém o **frontend em React + Vite**, totalmente integrado �
   - Mensagens de Ouvidoria
 - Permissões baseadas em **Admin / User**
 
----
+
 
 📂 Estrutura do Projeto
 src/
@@ -88,10 +88,9 @@ src/
 └── main.jsx              # renderização principal
 
 
-
 Essa divisão segue o padrão recomendado para aplicações React profissionais.
 
----
+
 ## 🧭 Fluxo de Navegação
 
 ### Visitantes (não autenticados):
